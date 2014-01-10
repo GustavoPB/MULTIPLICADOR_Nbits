@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC_tb_isim_beh.exe" -prj "C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC_tb_beh.prj" "work.ACC_tb" 

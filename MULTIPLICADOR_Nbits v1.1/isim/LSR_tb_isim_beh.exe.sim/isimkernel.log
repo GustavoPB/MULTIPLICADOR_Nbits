@@ -1,0 +1,35 @@
+Command line:
+   LSR_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54472
+
+Fri Jan 10 04:28:30 2014
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 677.667 Meg
+
+ Total Signals          : 10
+ Total Nets             : 26
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 4
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 387
+Total Line Count : 17
+
+** Failure:Test correct
+User(VHDL) Code Called Simulation Stop
+In process LSR_tb.vhd:73 
+ 
+
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 834.961 Meg
+
+Fri Jan 10 04:29:49 2014
+

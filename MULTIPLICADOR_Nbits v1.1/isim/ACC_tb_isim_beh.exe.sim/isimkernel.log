@@ -1,0 +1,35 @@
+Command line:
+   ACC_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58100
+
+Fri Jan 10 03:08:27 2014
+
+
+ Elaboration Time: 2.63642 sec
+
+ Current Memory Usage: 1327.42 Meg
+
+ Total Signals          : 11
+ Total Nets             : 15
+ Total Signal Drivers   : 6
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 4
+ Total Traceable Variables  : 11
+ Total Scalar Nets and Variables : 394
+Total Line Count : 33
+
+** Failure:TEST FINALIZADO CON EXITO
+User(VHDL) Code Called Simulation Stop
+In process ACC_tb.vhd:stim_proc 
+ 
+
+
+ Total Simulation Time: 2.66762 sec
+
+ Current Memory Usage: 698.233 Meg
+
+Fri Jan 10 04:29:47 2014
+
