@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-01-12T11:42:39</DateModified>
+  <DateModified>2014-01-13T01:12:09</DateModified>
   <ModuleName>LSR</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/iseconfig/LSR.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/iseconfig/LSR.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits\</ImplementationReportsDirectory>
   <DateInitialized>2014-01-10T02:07:09</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

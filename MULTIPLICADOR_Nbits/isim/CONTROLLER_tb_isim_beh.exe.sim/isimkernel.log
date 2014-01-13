@@ -1,0 +1,35 @@
+Command line:
+   CONTROLLER_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50773
+
+Mon Jan 13 03:35:15 2014
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 677.675 Meg
+
+ Total Signals          : 19
+ Total Nets             : 10
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 3
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 370
+Total Line Count : 83
+
+** Failure:Test OK
+User(VHDL) Code Called Simulation Stop
+In process CONTROLLER_tb.vhd:86 
+ 
+
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 677.675 Meg
+
+Mon Jan 13 03:35:24 2014
+

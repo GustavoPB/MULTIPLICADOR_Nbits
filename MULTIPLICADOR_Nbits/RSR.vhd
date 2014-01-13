@@ -39,7 +39,7 @@ entity RSR is
 		);
 end RSR;
 
-architecture Dataflow of RSR is
+architecture dataflow of RSR is
 
 	signal aux: std_logic_vector (factor_out'range);
 
@@ -60,5 +60,5 @@ begin
 			
 	factor_out <= aux;
 	
-end Dataflow;
+end dataflow;
 

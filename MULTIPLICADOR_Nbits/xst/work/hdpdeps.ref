@@ -1,4 +1,22 @@
-V3 6
+V3 13
+FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC.vhd 2014/01/12.14:09:27 P.68d
+EN work/ACC 1389532174 \
+      FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR work/ACC/dataflow 1389532175 \
+      FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC.vhd \
+      EN work/ACC 1389532174
+FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd 2014/01/13.03:15:13 P.68d
+AR work/CONTROLLER/Behavioral -1 \
+      FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd \
+      EN work/CONTROLLER 1389579442
+EN work/CONTROLLER 1389579442 \
+      FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd \
+      PB ieee/std_logic_1164 1370735607
+AR work/CONTROLLER/dataflow 1389579443 \
+      FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd \
+      EN work/CONTROLLER 1389579442
 FL "C:/Users/wortenmajadahonda/Documents/UPM/SED Sist Electronicos Digitales/MULTIPLICADOR_Nbits/LSR.vhd" 2014/01/10.04:28:01 P.68d
 EN work/LSR 1389324493 \
       FL "C:/Users/wortenmajadahonda/Documents/UPM/SED Sist Electronicos Digitales/MULTIPLICADOR_Nbits/LSR.vhd" \

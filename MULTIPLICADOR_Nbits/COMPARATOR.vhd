@@ -40,7 +40,7 @@ entity COMPARATOR is
 				
 end COMPARATOR;
 
-architecture Behavioral of COMPARATOR is
+architecture dataflow of COMPARATOR is
 
 	signal aux: std_logic_vector (num'range);
 
@@ -50,5 +50,5 @@ begin
 		z<= '1' WHEN num=aux ELSE '0';
 		lsb<=num(0);
 
-end Behavioral;
+end dataflow;
 

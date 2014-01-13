@@ -60,7 +60,7 @@ begin
 					suma_i <= suma_i + sumando;
 						
 				END IF;
-					END IF;
+				END IF;
 				
 	END PROCESS;
 	
