@@ -8,22 +8,124 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/COMPARATOR.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">111</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">112</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/LSR.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">113</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/RSR.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">114</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/SINGLE_ADAPT_C2.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">115</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">116</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">117</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">118</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">120</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">124</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">126</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">127</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">129</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">133</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">135</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">136</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">138</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">142</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">144</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">145</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">147</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">151</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">153</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">154</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">155</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">157</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">162</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">164</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">165</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">166</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">168</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">173</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">175</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">176</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">178</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">181</arg>. <arg fmt="%s" index="3">Syntax error near &quot;(&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">183</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">185</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/TOP.vhd</arg>&quot; Line <arg fmt="%d" index="2">186</arg>. <arg fmt="%s" index="3">Syntax error near &quot;,&quot;.</arg>
 </msg>
 
 </messages>
