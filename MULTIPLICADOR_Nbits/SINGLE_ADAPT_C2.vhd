@@ -37,6 +37,7 @@ entity SINGLE_ADAPT_C2 is
 				);
 	PORT(
 			num: IN std_logic_vector (nbits-1 DOWNTO 0);
+			revert: IN std_logic;
 			num_c2: OUT std_logic_vector(nbits-1 DOWNTO 0)
 			);
 end SINGLE_ADAPT_C2;
@@ -47,7 +48,7 @@ architecture Behavioral of SINGLE_ADAPT_C2 is
 	
 begin
 		num_i<=not num;
-		num_c2<= num_i+1 when num(nbits-1)='1' ELSE num;
+		num_c2<= num_i+1 when (num(nbits-1) xor revert)='1' ELSE num;
 		
 end Behavioral;
 
