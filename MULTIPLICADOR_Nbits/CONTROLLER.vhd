@@ -47,7 +47,7 @@ end CONTROLLER;
 
 architecture dataflow of CONTROLLER is
 
-type ESTADO is (REST,CHECK,RUN0,RUN1,FINISH);
+type ESTADO is (REST,CHECK,RUN0,RUN1, ADDING, FINISH);
 signal actual: ESTADO;
 
 begin
@@ -75,8 +75,12 @@ begin
 			actual<=CHECK;
 		end if;
 		if actual=RUN1 then 
-			actual<=CHECK;
+			actual<=ADDING;
 		end if;	
+		if actual=ADDING then 
+			actual<=CHECK;
+		end if;
+		
 	end if;	
 	end process;
 	
@@ -102,7 +106,6 @@ begin
 	end if;
 	if actual=RUN1 then
 			done_n<='1';
-			sh<='1';
 			restart_n<='1';
 			add<='1';
 	end if;
@@ -112,10 +115,14 @@ begin
 			restart_n<='1';
 			add<='0';
 	end if;
+	
+	if actual=ADDING then
+		add<='0';
+		sh<= '1';
+	end if;
 
 	end process;
 	
-
-
+	
 end dataflow;
 

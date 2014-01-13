@@ -30,6 +30,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity TOP is
+	GENERIC(
+				NBITS: positive:=4
+				);
+	PORT(
+			START, RESET_N, CLK: IN std_logic;
+			A, B: IN std_logic_vector(NBITS-1 DOWNTO 0);
+			DONE_N: OUT std_logic;
+			RESULT: OUT std_logic_vector(2*NBITS-1 DOWNTO 0)
+			);
 end TOP;
 
 architecture Estructural of TOP is
@@ -51,19 +60,19 @@ architecture Estructural of TOP is
 	COMPONENT SINGLE_ADAPT_C2
 		GENERIC (nbits: positive);
 		PORT(
-				num : IN  std_logic_vector(3 downto 0);
+				num : IN  std_logic_vector(nbits-1 downto 0);
 				revert: IN std_logic;
-				num_c2 : OUT  std_logic_vector(3 downto 0)
+				num_c2 : OUT  std_logic_vector(nbits-1 downto 0)
 				);
     END COMPONENT;
 		 
 	COMPONENT LSR
 		GENERIC (nbits: positive);
 		PORT(
-				factor_in : IN  std_logic_vector(3 downto 0);
+				factor_in : IN  std_logic_vector(nbits-1 downto 0);
 				load : IN  std_logic;
 				clk : IN std_logic;
-				factor_out : OUT  std_logic_vector(7 downto 0)
+				factor_out : OUT  std_logic_vector(2*nbits-1 downto 0)
 				);
     END COMPONENT;
 	 
@@ -72,10 +81,10 @@ architecture Estructural of TOP is
 					nbits: positive
 					);
 		PORT(
-				factor_in : IN  std_logic_vector(3 DOWNTO 0);
+				factor_in : IN  std_logic_vector(nbits-1 DOWNTO 0);
 				load : IN  std_logic;
 				clk : IN  std_logic;
-				factor_out : OUT  std_logic_vector(3 DOWNTO 0)
+				factor_out : OUT  std_logic_vector(nbits-1 DOWNTO 0)
 				);
 		END COMPONENT;
 	 
@@ -84,7 +93,7 @@ architecture Estructural of TOP is
 					nbits: positive
 					);
 		PORT(
-				num : IN  std_logic_vector(3 DOWNTO 0);
+				num : IN  std_logic_vector(nbits-1 DOWNTO 0);
 				z : OUT  std_logic;
 				lsb : OUT  std_logic
 				);
@@ -103,91 +112,104 @@ architecture Estructural of TOP is
 				);
     END COMPONENT;
 	 -- SE AÑADEN LAS SEÑALES DE INTERCONEXION
+	 signal z_i: std_logic:='0';
+	 signal lsb_i: std_logic;
+	 signal sh_i: std_logic;
+	 signal restart_i:std_logic;
+	 signal add_i:std_logic;
+	 signal a_c2i: std_logic_vector (NBITS-1 DOWNTO 0);--(A'range);
+	 signal b_c2i: std_logic_vector (NBITS-1 DOWNTO 0);--(B'range);
+	 signal suma_i: std_logic_vector (2*NBITS-1 DOWNTO 0);--(RESULT'range);
+	 signal lsr_out: std_logic_vector (2*NBITS-1 DOWNTO 0);--(RESULT'range);
+	 signal rsr_out: std_logic_vector (NBITS-1 DOWNTO 0);--(B'range);
+	 signal revert_i: std_logic;
 	 
 begin
 
 	CPU: CONTROLLER 
 		PORT MAP(
-				init=> ,
-				z => ,
-				lsb => ,
-				clk => ,
-				reset_n => ,
-				sh => ,
-				done_n => ,
-				restart_n => ,
-				add => 
+				init=> START,
+				z => z_i,
+				lsb => lsb_i,
+				clk => CLK,
+				reset_n => RESET_N,
+				sh => sh_i,
+				done_n => DONE_N,
+				restart_n => restart_i,
+				add => add_i
 				);
 				
 	ADAPT_LSR: SINGLE_ADAPT_C2
-		GENERIC MAP (nbits =>
+		GENERIC MAP (nbits => NBITS
 						)
 		PORT MAP(
-				num => ,
-				revert=> ,
-				num_c2 => 
+				num => A,
+				revert=> '0',
+				num_c2 => a_c2i
 				);
 	
 	ADAPT_RSR: SINGLE_ADAPT_C2
-		GENERIC MAP (nbits =>
+		GENERIC MAP (nbits => NBITS
 						)
 		PORT MAP(
-				num => ,
-				revert=> ,
-				num_c2 => 
+				num => B,
+				revert=> '0',
+				num_c2 => b_c2i
 				);
 	
 	ADAPT_RESULT: SINGLE_ADAPT_C2
-		GENERIC MAP (nbits =>
+		GENERIC MAP (nbits => 2*NBITS
 						)
 		PORT MAP(
-				num => ,
-				revert=> ,
-				num_c2 => 
+				num => suma_i,
+				revert=> revert_i,
+				num_c2 => RESULT
 				);
 	
 	MULTIPLICANT_LSR: LSR
-		GENERIC MAP(nbits => 
+		GENERIC MAP(nbits => NBITS
 					)
 		PORT MAP(
-				factor_in  => ,
-				load  => ,
-				clk  => ,
-				factor_out  => 
+				factor_in  => a_c2i,
+				load  => restart_i,
+				clk  => sh_i,
+				factor_out  => lsr_out
 				);
     
 	 
 	 MULTIPLICATOR_RSR: RSR
-		GENERIC MAP(nbits => 
+		GENERIC MAP(nbits => NBITS
 					)
 		PORT MAP(
-				factor_in  => ,
-				load  => ,
-				clk  => ,
-				factor_out  => 
+				factor_in  => b_c2i,
+				load  => restart_i,
+				clk  => sh_i,
+				factor_out  => rsr_out
 				);
 	
 	COMP: COMPARATOR
 		GENERIC MAP(
-					nbits => 
+					nbits => NBITS
 					)
 		PORT MAP(
-				num => ,
-				z => ,
-				lsb => 
+				num => rsr_out,
+				z => z_i,
+				lsb => lsb_i
 				);
 				
 	ACUMULATOR: ACC
-		GENERIC(
-					nbits => 
+		GENERIC MAP(
+					nbits => NBITS
 					)
-		PORT(
-				sumando => ,
-				reset_n => ,
-				add => ,
-				clk => ,
-				suma => ,
+		PORT MAP(
+				sumando => lsr_out,
+				reset_n => restart_i,
+				add => add_i,
+				clk => CLK,
+				suma => suma_i
 				);
+				
+	revert_i<='1' WHEN (A(NBITS-1) xor B(NBITS-1))='1' ELSE '0';
 
 end Estructural;
 

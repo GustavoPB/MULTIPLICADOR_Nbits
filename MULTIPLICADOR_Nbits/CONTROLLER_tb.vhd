@@ -111,10 +111,20 @@ begin
 	wait for 5 ns;
 
 	
-	assert done_n ='1' and sh='1' and restart_n='1' and add='1'
+	assert done_n ='1' and restart_n='1' and add='1'
 	report "failure in state RUN1"
 	severity failure;
 	clk<='0';
+	wait for 5 ns;
+	
+	clk<='1';
+	wait for 5 ns;
+	clk<='0';
+	wait for 5 ns;
+	
+	assert done_n ='1' and sh='1' and restart_n='1' and add='0'
+	report "failure in state ADDING"
+	severity failure;
 	wait for 5 ns;
 	
 	clk<='1';
