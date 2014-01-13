@@ -47,7 +47,7 @@ ARCHITECTURE behavior OF CONTROLLER_tb IS
          clk : IN  std_logic;
 			reset_n: IN std_logic;
          sh : OUT  std_logic;
-         done : OUT  std_logic;
+         done_n : OUT  std_logic;
          restart_n : OUT  std_logic;
          add : OUT  std_logic
         );
@@ -63,7 +63,7 @@ ARCHITECTURE behavior OF CONTROLLER_tb IS
 
  	--Outputs
    signal sh : std_logic;
-   signal done : std_logic;
+   signal done_n : std_logic;
    signal reset_n : std_logic;
    signal add : std_logic;
 
@@ -77,7 +77,7 @@ BEGIN
           lsb => lsb,
           clk => clk,
           sh => sh,
-          done => done,
+          done_n => done_n,
 			 restart_n => restart_n,
           reset_n => reset_n,
           add => add
@@ -85,14 +85,20 @@ BEGIN
 
 process
 begin
-
+	reset_n<='0';
+	wait for 5 ns;
+	assert done_n ='1' and sh='0' and restart_n='0' and add='0'
+	report "reset_n MALFUNCTION"
+	severity failure;
+	
+	reset_n<='1';
 	init<='1';
 	wait for 5 ns;
 	clk<='1';
 	wait for 5 ns;
 
 	
-	assert done ='0' and sh='0' and restart_n='1' and add='0'
+	assert done_n ='1' and sh='0' and restart_n='1' and add='0'
 	report "failure in state CHECK"
 	severity failure;
 	clk<='0';
@@ -105,7 +111,7 @@ begin
 	wait for 5 ns;
 
 	
-	assert done ='0' and sh='1' and restart_n='1' and add='1'
+	assert done_n ='1' and sh='1' and restart_n='1' and add='1'
 	report "failure in state RUN1"
 	severity failure;
 	clk<='0';
@@ -115,23 +121,38 @@ begin
 	wait for 5 ns;
 	clk<='0';
 	
+	assert done_n ='1' and sh='0' and restart_n='1' and add='0'
+	report "failure in state CHECK-return_from_RUN1"
+	severity failure;
+	wait for 5 ns;
+	
 	lsb<='0';
 	wait for 5 ns;
 	clk<='1';
 	wait for 5 ns;
 	
-	assert done ='0' and sh='1' and restart_n='1' and add='0'
+	assert done_n ='1' and sh='1' and restart_n='1' and add='0'
 	report "failure in state RUN0"
 	severity failure;
 	clk<='0';
 	wait for 5 ns;
-
+	
+	clk<='1';
+	wait for 5 ns;
+	clk<='0';
+	wait for 5 ns;
+	
+	assert done_n ='1' and sh='0' and restart_n='1' and add='0'
+	report "failure in state CHECK-return_from_RUN0"
+	severity failure;
+	wait for 5 ns;
+	
 	z<='1';
 	wait for 5 ns;
 	clk<='1';
 	wait for 5 ns;
 	
-	assert done ='0' and sh='0' and restart_n='1' and add='0'
+	assert done_n ='0' and sh='0' and restart_n='1' and add='0'
 	report "failure in state FINISH"
 	severity failure;
 	clk<='0';
@@ -147,7 +168,7 @@ begin
 	wait for 5 ns;
 	
 	
-	assert done ='1' and sh='0' and restart_n='0' and add='0'
+	assert done_n ='1' and sh='0' and restart_n='0' and add='0'
 	report "failure in state REST"
 	severity failure;
 	clk<='0';

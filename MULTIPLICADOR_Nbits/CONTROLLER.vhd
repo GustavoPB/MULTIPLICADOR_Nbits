@@ -38,7 +38,7 @@ entity CONTROLLER is
 		clk		: in std_logic;
 		reset_n	: in std_logic;
 		sh			: out std_logic;
-		done		: out std_logic;
+		done_n		: out std_logic;
 		restart_n	: out std_logic;
 		add		: out std_logic
 	);
@@ -51,9 +51,11 @@ type ESTADO is (REST,CHECK,RUN0,RUN1,FINISH);
 signal actual: ESTADO;
 
 begin
-	process(clk)
+	process(clk, reset_n)
 	begin
-	if clk'event and clk='1' then
+	
+	if reset_n='0' then actual <= REST;
+	elsif clk'event and clk='1' then
 		if actual=REST and init='1' then
 			actual<=CHECK;
 		end if;
@@ -81,31 +83,31 @@ begin
 	process(actual)
 	begin
 	if actual=REST then
-			done<='1';
+			done_n<='1';
 			sh<='0';
 			restart_n<='0';
 			add<='0';
 	end if;
 	if actual=CHECK then
-			done<='0';
+			done_n<='1';
 			sh<='0';
 			restart_n<='1';
 			add<='0';
 	end if;
 	if actual=RUN0 then
-			done<='0';
+			done_n<='1';
 			sh<='1';
 			restart_n<='1';
 			add<='0';
 	end if;
 	if actual=RUN1 then
-			done<='0';
+			done_n<='1';
 			sh<='1';
 			restart_n<='1';
 			add<='1';
 	end if;
 	if actual =FINISH then
-			done<='0';
+			done_n<='0';
 			sh<='0';
 			restart_n<='1';
 			add<='0';
