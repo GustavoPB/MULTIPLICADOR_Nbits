@@ -1,0 +1,68 @@
+V3 37
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/ACC.vhd" 2014/01/14.00:12:06 P.68d
+EN work/ACC 1389658046 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/ACC.vhd" \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR work/ACC/dataflow 1389658047 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/ACC.vhd" \
+      EN work/ACC 1389658046
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/COMPARATOR.vhd" 2014/01/13.11:13:07 P.68d
+EN work/COMPARATOR 1389658044 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/COMPARATOR.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/COMPARATOR/dataflow 1389658045 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/COMPARATOR.vhd" \
+      EN work/COMPARATOR 1389658044
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/CONTROLLER.vhd" 2014/01/13.21:57:48 P.68d
+EN work/CONTROLLER 1389658036 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/CONTROLLER.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/CONTROLLER/dataflow 1389658037 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/CONTROLLER.vhd" \
+      EN work/CONTROLLER 1389658036
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/latch_D.vhd" 2014/01/14.01:05:42 P.68d
+EN work/latch_D 1389658048 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/latch_D.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/latch_D/Behavioral 1389658049 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/latch_D.vhd" \
+      EN work/latch_D 1389658048
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/LSR.vhd" 2014/01/10.04:37:07 P.68d
+EN work/LSR 1389658040 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/LSR.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/LSR/dataflow 1389658041 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/LSR.vhd" \
+      EN work/LSR 1389658040
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/RSR.vhd" 2014/01/13.11:13:07 P.68d
+EN work/RSR 1389658042 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/RSR.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/RSR/dataflow 1389658043 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/RSR.vhd" \
+      EN work/RSR 1389658042
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/SINGLE_ADAPT_C2.vhd" 2014/01/13.14:59:37 P.68d
+EN work/SINGLE_ADAPT_C2 1389658038 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/SINGLE_ADAPT_C2.vhd" \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609 PB ieee/NUMERIC_STD 1370735611
+AR work/SINGLE_ADAPT_C2/Behavioral 1389658039 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/SINGLE_ADAPT_C2.vhd" \
+      EN work/SINGLE_ADAPT_C2 1389658038
+FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/TOP.vhd" 2014/01/14.01:07:09 P.68d
+EN work/TOP 1389658050 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/TOP.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/TOP/Estructural 1389658051 \
+      FL "C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/TOP.vhd" \
+      EN work/TOP 1389658050 CP CONTROLLER CP SINGLE_ADAPT_C2 CP LSR CP RSR \
+      CP COMPARATOR CP ACC CP latch_D
+FL C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd 2014/01/13.12:26:24 P.68d
+FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/ACC.vhd 2014/01/12.14:09:27 P.68d
+FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd 2014/01/13.03:15:13 P.68d
+AR work/CONTROLLER/Behavioral -1 \
+      FL C:/Users/wortenmajadahonda/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits/CONTROLLER.vhd \
+      EN work/CONTROLLER 1389658036
+FL "C:/Users/wortenmajadahonda/Documents/UPM/SED Sist Electronicos Digitales/MULTIPLICADOR_Nbits/LSR.vhd" 2014/01/10.04:28:01 P.68d
+FL "C:/Users/wortenmajadahonda/Documents/UPM/SED Sist Electronicos Digitales/MULTIPLICADOR_Nbits/Register.vhd" 2014/01/10.03:00:00 P.68d
