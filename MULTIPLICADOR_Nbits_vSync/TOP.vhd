@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity TOP is
 	GENERIC(
-				NBITS: positive:=4
+				NBITS: positive:=3
 				);
 	PORT(
 			START, RESET_N, CLK: IN std_logic;
@@ -71,7 +71,8 @@ architecture Estructural of TOP is
 		PORT(
 				factor_in : IN  std_logic_vector(nbits-1 downto 0);
 				load : IN  std_logic;
-				clk : IN std_logic;
+				sh : IN std_logic;
+				clk  : in std_logic;
 				factor_out : OUT  std_logic_vector(2*nbits-1 downto 0)
 				);
     END COMPONENT;
@@ -84,6 +85,7 @@ architecture Estructural of TOP is
 				factor_in : IN  std_logic_vector(nbits-1 DOWNTO 0);
 				load : IN  std_logic;
 				clk : IN  std_logic;
+				sh : IN  std_logic;
 				factor_out : OUT  std_logic_vector(nbits-1 DOWNTO 0)
 				);
 		END COMPONENT;
@@ -108,7 +110,7 @@ architecture Estructural of TOP is
 				reset_n : IN  std_logic;
 				add : IN  std_logic;
 				clk : IN  std_logic;
-				oe_n: IN std_logic;
+				oe: IN std_logic;
 				suma : OUT  std_logic_vector(2*nbits-1 DOWNTO 0)
 				);
     END COMPONENT;
@@ -117,6 +119,7 @@ architecture Estructural of TOP is
 		PORT(
 				d:in std_logic;
 				clk: in std_logic;
+				enable: std_logic;
 				q: out std_logic
 		);
 		END COMPONENT;
@@ -134,7 +137,7 @@ architecture Estructural of TOP is
 	 signal rsr_out: std_logic_vector (NBITS-1 DOWNTO 0);--(B'range);
 	 signal revert_i: std_logic;
 	 signal done_ni: std_logic;
-	 signal oe_ni: std_logic;
+	 signal oe_i: std_logic;
 	 signal latch_qi: std_logic;
 	 
 begin
@@ -185,7 +188,8 @@ begin
 		PORT MAP(
 				factor_in  => a_c2i,
 				load  => restart_i,
-				clk  => sh_i,
+				sh  => sh_i,
+				clk => CLK,
 				factor_out  => lsr_out
 				);
     
@@ -196,7 +200,8 @@ begin
 		PORT MAP(
 				factor_in  => b_c2i,
 				load  => restart_i,
-				clk  => sh_i,
+				sh  => sh_i,
+				clk => CLK,
 				factor_out  => rsr_out
 				);
 	
@@ -219,7 +224,7 @@ begin
 				reset_n => restart_i,
 				add => add_i,
 				clk => CLK,
-				oe_n=>oe_ni,
+				oe=>oe_i,
 				suma => suma_i
 				);
 				
@@ -227,12 +232,13 @@ begin
 		PORT MAP(
 				d => revert_i,
 				clk => CLK,
+				enable => START,
 				q => latch_qi
 				);
 				
 	revert_i<='1' WHEN (A(NBITS-1) xor B(NBITS-1))='1' ELSE '0';
 	DONE_N<=done_ni;
-	oe_ni<=done_ni and START;
+	oe_i<=done_ni and START;
 
 end Estructural;
 

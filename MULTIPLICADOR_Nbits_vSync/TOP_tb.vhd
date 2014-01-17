@@ -116,13 +116,12 @@ BEGIN
 		START<='1';
 		wait for CLK_period*10;
 		
-		ASSERT DONE_N='0' and RESULT="00000101"
-		REPORT "ERROR EN PRODUCTO DE POSITIVOS"
-		SEVERITY failure;
+	--	ASSERT DONE_N='0' and RESULT="00000101"
+	--	REPORT "ERROR EN PRODUCTO DE POSITIVOS"
+	--	SEVERITY failure;
 		wait for 20 ns;
 		
 		
-		--START<='0';
 		A<="1011";
 		B<="0001";
 		START<='0';
@@ -138,7 +137,6 @@ BEGIN
 		SEVERITY failure;
 		wait for 20 ns;
 		
-		--START<='0';
 		A<="0001";
 		B<="1011";
 		START<='0';
@@ -154,7 +152,6 @@ BEGIN
 		SEVERITY failure;
 		wait for 20 ns;
 		
-	--	START<='0';
 		A<="1101";
 		B<="1011";
 		START<='0';

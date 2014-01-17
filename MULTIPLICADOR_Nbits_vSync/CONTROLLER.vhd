@@ -65,7 +65,7 @@ begin
 		if actual=CHECK and z='0' and lsb='0' then
 			actual<=RUN0;
 		end if;
-		if actual=CHECK and z='1' then
+		if actual=CHECK and z='1' and lsb='0'then
 			actual<=FINISH;
 		end if;
 		if actual=FINISH and init='0' then

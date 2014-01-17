@@ -35,30 +35,51 @@ entity RSR is
 		factor_in	: in std_logic_vector(nbits-1 downto 0);
 		load			: in std_logic;
 		clk         : in std_logic;
+		sh         : in std_logic;
 		factor_out	: out std_logic_vector(nbits-1 downto 0)
 		);
 end RSR;
 
 architecture dataflow of RSR is
 
-	signal aux: std_logic_vector (factor_out'range);
+	signal num: std_logic_vector (factor_out'range);
+	signal last_load: std_logic;
+	signal last_sh: std_logic;
 
 begin
 		
-		PROCESS(load, clk)
-			BEGIN
-				
-				IF (load='0') THEN 
-								aux<=(OTHERS=>'0');
-				ELSIF (load='1' and load'event) THEN 
-								aux<=factor_in;
-				ELSIF (clk='1' and clk'event) THEN
-								aux <= '0' & aux(nbits-1 DOWNTO 1);
-							
-							END IF;
+process(clk)
+	begin
+		if clk'event and clk = '0' then
+		  if load = '0' then
+		    num <= (others => '0');
+		  elsif load = '1' then
+		    if last_load = '0' then	
+			   num <= factor_in ;
+		    elsif sh /= last_sh and sh = '1' then
+			   num <= '0' & num(nbits-1 DOWNTO 1);
+			 end if;
+		  end if;
+		  last_sh <= sh;
+		  last_load <= load;
+		end if;
+
 			END PROCESS;
+--PROCESS(load, sh)
+--			BEGIN
+--				
+--				IF (load='0') THEN 
+--								num<=(OTHERS=>'0');
+--				ELSIF (load='1' and load'event) THEN 
+--								num<=factor_in;
+--				ELSIF (sh='1' and sh'event) THEN
+--								num <= '0' & num(nbits-1 DOWNTO 1);
+--							
+--							END IF;
+--			END PROCESS;
 			
-	factor_out <= aux;
+	factor_out <= num;
+	--factor_out <= num WHEN load = '1' ELSE (others => '0');
 	
 end dataflow;
 

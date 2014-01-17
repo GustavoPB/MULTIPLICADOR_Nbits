@@ -47,6 +47,7 @@ ARCHITECTURE behavior OF RSR_tb IS
          factor_in : IN  std_logic_vector(3 DOWNTO 0);
          load : IN  std_logic;
          clk : IN  std_logic;
+			sh: In std_logic;
          factor_out : OUT  std_logic_vector(3 DOWNTO 0)
         );
     END COMPONENT;
@@ -56,9 +57,11 @@ ARCHITECTURE behavior OF RSR_tb IS
    signal factor_in : std_logic_vector(3 DOWNTO 0) := (others => '0');
    signal load : std_logic := '0';
    signal clk : std_logic := '0';
-
+	signal sh : std_logic := '0';
  	--Outputs
    signal factor_out : std_logic_vector(3 DOWNTO 0);
+	 -- Clock period definitions
+   constant CLK_period : time := 10 ns;
 
  
 BEGIN
@@ -73,8 +76,17 @@ BEGIN
           factor_in => factor_in,
           load => load,
           clk => clk,
+			 sh => sh,
           factor_out => factor_out
         );
+	 -- Clock process definitions
+   CLK_process :process
+   begin
+		clk <= '0';
+		wait for CLK_period/2;
+		clk <= '1';
+		wait for CLK_period/2;
+   end process;
 
 
    -- Stimulus process
@@ -92,19 +104,20 @@ BEGIN
 	SEVERITY failure;
 	wait for 10 ns;
 	
-	clk <= '1';
+	sh <= '1';
 	wait for 10 ns;
-	clk <= '0';
+	sh <= '0';
 	wait for 10 ns;
+
 	
 	ASSERT factor_out = "0101"
 	REPORT "ERROR EN EL PRIMER DESPLAZAMIENTO"
 	SEVERITY failure;
 	wait for 10 ns;
 	
-	clk <= '1';
+	sh <= '1';
 	wait for 10 ns;
-	clk <= '0';
+	sh <= '0';
 	wait for 10 ns;
 	
 	ASSERT factor_out = "0010"
@@ -112,9 +125,9 @@ BEGIN
 	SEVERITY failure;
 	wait for 10 ns;
 	
-	clk <= '1';
+	sh <= '1';
 	wait for 10 ns;
-	clk <= '0';
+	sh <= '0';
 	wait for 10 ns;
 	
 	ASSERT factor_out = "0001"
@@ -122,9 +135,9 @@ BEGIN
 	SEVERITY failure;
 	wait for 10 ns;
 	
-	clk <= '1';
+	sh <= '1';
 	wait for 10 ns;
-	clk <= '0';
+	sh <= '0';
 	wait for 10 ns;
 	
 	ASSERT factor_out = "0000"

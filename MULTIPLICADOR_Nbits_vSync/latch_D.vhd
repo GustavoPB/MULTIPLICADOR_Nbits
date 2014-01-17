@@ -33,22 +33,25 @@ entity latch_D is
 PORT(
 		d:in std_logic;
 		clk: in std_logic;
+		enable: in std_logic;
 		q: out std_logic
 		);
 		
 end latch_D;
 
 architecture Behavioral of latch_D is
+signal q_i: std_logic;
 	
 begin
 
-	PROCESS(clk)
+	PROCESS(clk, enable)
 		BEGIN
-		
-	IF(clk = '1' and clk'event) THEN q<=d;
+	IF(enable='1') THEN q_i<=q_i;
+	ELSIF(clk = '1' and clk'event) THEN q_i<=d;
 		END IF;
 	
 	END PROCESS;
+	q<=q_i;
 
 end architecture Behavioral;
 

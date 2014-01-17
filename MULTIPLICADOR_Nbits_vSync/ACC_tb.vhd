@@ -47,6 +47,7 @@ ARCHITECTURE behavior OF ACC_tb IS
          sumando : IN  std_logic_vector(2*nbits-1 DOWNTO 0);
          reset_n : IN  std_logic;
          add : IN  std_logic;
+			oe : IN  std_logic;
 			clk : IN  std_logic;
          suma : OUT  std_logic_vector(2*nbits-1 DOWNTO 0)
         );
@@ -57,6 +58,7 @@ ARCHITECTURE behavior OF ACC_tb IS
    signal sumando : std_logic_vector(3 DOWNTO 0) := (others => '0');
    signal reset_n : std_logic := '0';
    signal add : std_logic := '0';
+	signal oe : std_logic := '0';
    signal clk : std_logic := '0';
  	--Outputs
    signal suma : std_logic_vector(3 DOWNTO 0);
@@ -74,6 +76,7 @@ BEGIN
           reset_n => reset_n,
           add => add,
 			 clk=>clk,
+			 oe => oe,
           suma => suma
         );
 	
@@ -83,6 +86,7 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin	
+			oe<='0';
 			reset_n <= '0';
 			
 			wait for 20 ns;

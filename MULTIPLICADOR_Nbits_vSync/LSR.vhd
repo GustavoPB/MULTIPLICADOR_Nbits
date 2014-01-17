@@ -34,7 +34,8 @@ entity LSR is
 	port(
 		factor_in	: in std_logic_vector(nbits-1 downto 0);
 		load			: in std_logic;
-		clk         : in std_logic;
+		clk  : in std_logic;
+		sh         : in std_logic;
 		factor_out	: out std_logic_vector(2*nbits-1 downto 0)
 		);
 end LSR;
@@ -42,20 +43,25 @@ end LSR;
 architecture dataflow of LSR is
 	signal num: std_logic_vector(2*nbits-1 downto 0);
 	signal aux: std_logic_vector(nbits-1 downto 0);
+	signal last_load: std_logic;
+	signal last_sh: std_logic;
 begin
-	process(clk, load)
+	process(clk)
 	begin
-
-		if load='0' then num<=(others=>'0');
-		elsif load='1' and load'event then
-			num <= aux & factor_in ;
-		elsif(clk='1' and clk'event) then
-				num <= num(2*nbits-2 downto 0) & '0';
+		if clk'event and clk = '0' then
+		  if load = '0' then
+		    num <= (others => '0');
+		  elsif load = '1' then
+		    if last_load = '0' then	
+			   num <= aux & factor_in ;
+		    elsif sh /= last_sh and sh = '1' then
+			   num <= num(2 * nbits - 2 downto 0) & '0';
+			 end if;
+		  end if;
+		  last_sh <= sh;
+		  last_load <= load;
 		end if;
-		end process;
-		
-		aux<=(others=>'0');
-		factor_out<=num;
-			
+	end process;
+	aux <= (others=>'0');
+	factor_out <= num WHEN load = '1' ELSE (others => '0');
 end dataflow;
-

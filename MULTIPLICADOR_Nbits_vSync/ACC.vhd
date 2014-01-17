@@ -37,7 +37,7 @@ entity ACC is
 				);
 	PORT(
 			sumando: IN std_logic_vector ((2*nbits)-1 DOWNTO 0);
-			reset_n, add, clk, oe_n: IN std_logic;
+			reset_n, add, clk, oe: IN std_logic;
 			suma: OUT std_logic_vector ((2*nbits)-1 DOWNTO 0)
 			);
 			
@@ -55,7 +55,7 @@ begin
 				
 				IF (reset_n='0') THEN 
 					suma_i<=(OTHERS=>'0');
-				ELSIF (clk='1' and clk'event) THEN
+				ELSIF (clk='0' and clk'event) THEN
 					IF (add='1') THEN
 					suma_i <= suma_i + sumando;
 						
@@ -64,7 +64,7 @@ begin
 				
 	END PROCESS;
 	
-	suma <= suma_i WHEN oe_n='0' ELSE (others=>'0');
+	suma <= suma_i WHEN oe='0' ELSE (others=>'0');
 					
 end dataflow;
 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-01-14T01:44:54</DateModified>
+  <DateModified>2014-01-17T14:17:05</DateModified>
   <ModuleName>TOP</ModuleName>
   <SummaryTimeStamp>2014-01-14T00:05:26</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits/iseconfig/TOP.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Guss/Desktop/TRABAJO SED/MULTIPLICADOR_Nbits\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits_vSync/iseconfig/TOP.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Guss/Documents/GitHub/MULTIPLICADOR_Nbits/MULTIPLICADOR_Nbits_vSync\</ImplementationReportsDirectory>
   <DateInitialized>2014-01-13T19:24:26</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
